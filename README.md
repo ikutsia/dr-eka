@@ -1,70 +1,167 @@
-# Getting Started with Create React App
+# Dr. Ekaterina Kutsia - Online Video Courses
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A professional website for Dr. Ekaterina Kutsia's online video courses for pregnant women and new parents.
 
-## Available Scripts
+## 🚀 Features
 
-In the project directory, you can run:
+- **Professional Design**: Light pastel colors with pediatric themes
+- **Responsive Layout**: Works perfectly on all devices
+- **Course Catalog**: 5 comprehensive courses covering pregnancy to toddler care
+- **Testimonials**: Social proof from satisfied parents
+- **FAQ Section**: Common questions and answers
+- **Contact Information**: Easy ways to get in touch
 
-### `npm start`
+## 🛠 Tech Stack
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- **React 19.1.1**: Modern React with hooks
+- **Tailwind CSS**: Utility-first CSS framework
+- **Responsive Design**: Mobile-first approach
+- **Netlify**: Deployment platform
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## 📦 Installation
 
-### `npm test`
+1. Clone the repository:
+```bash
+git clone <your-repo-url>
+cd dr-eka
+```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+2. Install dependencies:
+```bash
+npm install
+```
 
-### `npm run build`
+3. Start development server:
+```bash
+npm start
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+4. Build for production:
+```bash
+npm run build
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## 🌐 Deployment to Netlify
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Option 1: Deploy via Netlify UI (Recommended)
 
-### `npm run eject`
+1. **Push to GitHub**: 
+   - Create a GitHub repository
+   - Push your code to GitHub
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+2. **Connect to Netlify**:
+   - Go to [netlify.com](https://netlify.com)
+   - Sign up/Login with your GitHub account
+   - Click "New site from Git"
+   - Choose your repository
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+3. **Configure Build Settings**:
+   - Build command: `npm run build`
+   - Publish directory: `build`
+   - Click "Deploy site"
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### Option 2: Deploy via Netlify CLI
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+1. **Install Netlify CLI**:
+```bash
+npm install -g netlify-cli
+```
 
-## Learn More
+2. **Login to Netlify**:
+```bash
+netlify login
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+3. **Deploy**:
+```bash
+netlify deploy --prod --dir=build
+```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### Option 3: Drag & Drop
 
-### Code Splitting
+1. **Build the project**:
+```bash
+npm run build
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+2. **Drag the `build` folder** to [netlify.com](https://netlify.com)
 
-### Analyzing the Bundle Size
+## 🔧 Configuration Files
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+- `netlify.toml`: Netlify deployment configuration
+- `public/_redirects`: SPA routing support
+- `tailwind.config.js`: Tailwind CSS configuration
 
-### Making a Progressive Web App
+## 📁 Project Structure
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+```
+dr-eka/
+├── public/
+│   ├── _redirects          # Netlify redirects
+│   └── index.html
+├── src/
+│   ├── components/
+│   │   ├── Navbar.js       # Navigation component
+│   │   ├── Hero.js         # Hero section
+│   │   ├── Courses.js      # Course catalog
+│   │   ├── Testimonials.js # Testimonials section
+│   │   ├── QandA.js        # FAQ section
+│   │   └── Footer.js       # Footer component
+│   ├── App.js              # Main app component
+│   ├── index.js            # App entry point
+│   └── index.css           # Global styles
+├── netlify.toml            # Netlify configuration
+└── package.json
+```
 
-### Advanced Configuration
+## 🎨 Customization
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+### Colors
+The website uses custom pastel colors defined in `tailwind.config.js`:
+- `pastel-pink`, `pastel-blue`, `pastel-green`, `pastel-yellow`, `pastel-purple`
+- `soft-pink`, `soft-blue`, `soft-green`, `soft-yellow`, `soft-purple`
 
-### Deployment
+### Content
+- Update course information in `src/components/Courses.js`
+- Modify testimonials in `src/components/Testimonials.js`
+- Edit FAQ in `src/components/QandA.js`
+- Update contact information in `src/components/Footer.js`
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+## 📱 Responsive Design
 
-### `npm run build` fails to minify
+The website is fully responsive with breakpoints:
+- Mobile: Default (320px+)
+- Tablet: `md:` (768px+)
+- Desktop: `lg:` (1024px+)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## 🔒 Security Headers
+
+The `netlify.toml` file includes security headers:
+- X-Frame-Options: DENY
+- X-XSS-Protection: 1; mode=block
+- X-Content-Type-Options: nosniff
+- Referrer-Policy: strict-origin-when-cross-origin
+
+## 📈 Performance
+
+- Optimized build with gzip compression
+- Static assets cached for 1 year
+- Lazy loading for better performance
+
+## 🚀 Next Steps
+
+1. **Add Dr. Ekaterina's photo** to the hero section
+2. **Update social media links** with actual URLs
+3. **Connect forms** to backend services
+4. **Add actual course content** and video integration
+5. **Set up analytics** (Google Analytics, etc.)
+
+## 📞 Support
+
+For questions or support, contact:
+- Email: contact@drekaterina.com
+- Website: [Your Netlify URL]
+
+---
+
+© 2025 Dr. Ekaterina Kutsia. All rights reserved.
